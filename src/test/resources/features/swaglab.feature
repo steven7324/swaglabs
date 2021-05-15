@@ -16,7 +16,7 @@ Feature: Form Swaglab
   Scenario: Verify the successful purchase of an item with the standard user
     Given I login into the app with username "standard_user" and password "secret_sauce"
     When I select an item from the site and make the buy
-      | lstTipoPersona | lstTipoDoc | txtDoc |
+      | txtFirstName | txtLastName | txtPostalCode |
       | Steven         | Arbelaez   | 054040 |
     Then Verify the message "THANK YOU FOR YOUR ORDER" after complete the order
 
@@ -24,7 +24,7 @@ Feature: Form Swaglab
   Scenario: Verify the successful purchase of the lowest and the highest priced items
     Given I login into the app with username "standard_user" and password "secret_sauce"
     When I buy the lower and the higher price items from the site
-      | lstTipoPersona | lstTipoDoc | txtDoc |
+      | txtFirstName | txtLastName | txtPostalCode |
       | Steven         | Arbelaez   | 054040 |
     Then Verify the message "THANK YOU FOR YOUR ORDER" after complete the order
 
